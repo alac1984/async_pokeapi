@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "httpx-learning"
+version = "0.1.0"
+description = ""
+authors = ["André Carvalho <alac1984@gmail.com>"]
+readme = "README.md"
+packages = [{include = "httpx_learning"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+httpx = "^0.24.0"
+rich = "^13.3.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pynvim = "^0.4.3"
+black = "^23.3.0"
+flake8 = "^6.0.0"
+flake8-pyproject = "^1.2.3"
+mypy = "^1.2.0"
+pytest = "^7.3.1"
+respx = "^0.20.1"
+pytest-asyncio = "^0.21.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.flake8]
+ignore = ['E231', 'E241']
+per-file-ignores = [
+    '__init__.py:F401',
+]
+max-line-length = 88
+count = true
